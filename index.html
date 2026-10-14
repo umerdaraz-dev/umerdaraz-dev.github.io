@@ -251,17 +251,20 @@ html:not(.js) .logos{flex-wrap:wrap;flex:1;gap:24px 40px}
 
 /* sections */
 .sec{padding:128px 0}
-.sec-head{display:grid;gap:18px;margin-bottom:64px}
+.sec-head{display:grid;gap:18px;margin-bottom:64px;justify-items:center;text-align:center}
+.sec-head h2{max-width:22ch}
+.sec-head .lede{margin-inline:auto}
 
 /* work */
-.case{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);gap:64px;align-items:center;padding:56px 0;border-top:1px solid var(--line)}
+.case{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);gap:28px 64px;align-items:start;padding:56px 0;border-top:1px solid var(--line)}
 .case:first-of-type{border-top:0;padding-top:0}
 .case.flip{grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr)}
 .case.flip .case-text{order:2}
 .case-client{font-weight:620;color:var(--amber-text);font-size:.98rem}
-.case h3{margin-top:12px;font-size:clamp(1.6rem,2.6vw,2.15rem);font-stretch:80%;font-weight:720;line-height:1.08;max-width:22ch}
+.case-head{grid-column:1 / -1}
+.case h3{margin-top:10px;font-size:clamp(1.5rem,2.4vw,2rem);font-stretch:80%;font-weight:720;line-height:1.15;max-width:none;text-wrap:balance}
 html[lang="ar"] .case h3{line-height:1.35}
-.case p.body{margin-top:18px;color:var(--muted);max-width:52ch}
+.case p.body{margin-top:0;color:var(--muted);max-width:52ch}
 .figures{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:8px 36px;margin:28px 0 0;padding:20px 0 0;border-top:1px solid var(--line)}
 .figures div{display:flex;flex-direction:column-reverse}
 .figures dt{font-size:.88rem;color:var(--muted)}
@@ -306,7 +309,7 @@ dialog.case-dlg::backdrop{background:rgba(6,24,18,.62);backdrop-filter:blur(3px)
 
 /* more projects */
 .more{margin-top:40px;border-top:1px solid var(--line);padding-top:56px}
-.more h3{font-size:1.55rem;font-stretch:80%}
+.more h3{font-size:clamp(1.6rem,2.6vw,2.2rem);font-stretch:80%;text-align:center}
 .proj{width:100%;border-collapse:collapse;margin-top:26px}
 .proj th{text-align:start;font-size:.88rem;font-weight:600;color:var(--muted);padding:0 0 12px;padding-inline-end:20px;border-bottom:1px solid var(--line)}
 .proj td{vertical-align:top;padding:20px 0;padding-inline-end:20px;border-bottom:1px solid var(--line)}
@@ -402,6 +405,7 @@ dialog.case-dlg::backdrop{background:rgba(6,24,18,.62);backdrop-filter:blur(3px)
 /* faq */
 .faq-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:72px;align-items:start}
 .faq-grid .sec-head{position:sticky;top:110px;margin:0}
+.faq{max-width:860px;margin-inline:auto}
 .faq details{border-top:1px solid var(--line)}
 .faq details:last-child{border-bottom:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;padding:22px 0;padding-inline-end:48px;font-weight:620;font-size:1.08rem;position:relative}
@@ -595,16 +599,14 @@ footer{padding:0 0 48px;color:var(--muted);font-size:.9rem}
     </div>
 
     <article class="case">
+      <header class="case-head"><p class="case-client">DHA Quetta, housing authority, Pakistan</p><h3>Odoo ERP for a housing authority: property, allotment and land management</h3></header>
       <div class="case-text">
-        <p class="case-client">DHA Quetta, housing authority, Pakistan</p>
-        <h3>Odoo ERP for a housing authority: property, allotment and land management</h3>
         <p class="body">Membership, plot allotment and computerised balloting, transfers, building approvals and land acquisition, all in one Odoo system. I extend and maintain it, built new modules for batch allotment and the location ballot, and moved the full custom suite from Odoo 16 to 19.</p>
         <dl class="figures">
           <div><dt>data models</dt><dd>196</dd></div>
           <div><dt>application types</dt><dd class="ltr">40+</dd></div>
           <div><dt>upgrade path</dt><dd>16 to 19</dd></div>
         </dl>
-        <p class="modules">Modules I built:<br><code>dha_location_ballot</code> <code>pms_multi_property_allotment</code> <code>ts_land_management</code></p>
         <p class="more-link"><button class="textlink" type="button" data-open="dlg-dha">Read the case study</button></p>
       </div>
       <figure class="shot">
@@ -617,9 +619,8 @@ footer{padding:0 0 48px;color:var(--muted);font-size:.9rem}
     </article>
 
     <article class="case flip">
+      <header class="case-head"><p class="case-client">Tadbeer Al Safwa, domestic workers services, Dubai</p><h3>Odoo website development: a bilingual worker catalogue with online booking</h3></header>
       <div class="case-text">
-        <p class="case-client">Tadbeer Al Safwa, domestic workers services, Dubai</p>
-        <h3>Odoo website development: a bilingual worker catalogue with online booking</h3>
         <p class="body">A bilingual English and Arabic Odoo website for a Tadbeer centre. Visitors search available workers and filter by nationality, job, status, experience and category, then order the service online. The back office runs on the same Odoo database.</p>
         <dl class="figures">
           <div><dt>languages</dt><dd class="ltr">EN + AR</dd></div>
@@ -644,9 +645,8 @@ footer{padding:0 0 48px;color:var(--muted);font-size:.9rem}
     </article>
 
     <article class="case">
+      <header class="case-head"><p class="case-client">Digital World Technology, IT distributor, Dubai</p><h3>Odoo B2B eCommerce: a trade-only store where prices show after login</h3></header>
       <div class="case-text">
-        <p class="case-client">Digital World Technology, IT distributor, Dubai</p>
-        <h3>Odoo B2B eCommerce: a trade-only store where prices show after login</h3>
         <p class="body">Odoo eCommerce for a distributor of networking, server, printer and software products across Dubai and the wider region. A large catalogue is organised under category menus, and prices stay hidden until a registered trade customer signs in.</p>
         <dl class="figures">
           <div><dt>model</dt><dd class="ltr">B2B</dd></div>
@@ -800,9 +800,10 @@ footer{padding:0 0 48px;color:var(--muted);font-size:.9rem}
 </section>
 
 <section class="sec" id="about" aria-labelledby="ab-h" style="padding-top:0">
-  <div class="wrap about">
+  <div class="wrap">
+  <div class="sec-head"><h2 id="ab-h">About me</h2></div>
+  <div class="about">
     <div>
-      <div class="sec-head" style="margin-bottom:32px"><h2 id="ab-h">About me</h2></div>
       <div class="about-text"><p>I’m Umer Daraz, an Odoo developer and techno-functional consultant with three years of building, customizing and maintaining Odoo ERP for housing authorities, contractors, distributors, retailers and service businesses.</p><p>I work on both sides of a project: I sit with the requirement, write it down, build it, and look after the server it runs on. I'm comfortable with the unglamorous parts too, like reading someone else's custom code, fixing data that doesn't add up, and making reports match the accounts.</p><p>I work in English, write short updates as work progresses, and say early if something will take longer than quoted.</p></div>
     </div>
     <div>
@@ -814,10 +815,11 @@ footer{padding:0 0 48px;color:var(--muted);font-size:.9rem}
       <p class="tools"><b>Daily tools:</b> Python, Odoo ORM, OWL and JavaScript, XML and QWeb, PostgreSQL, Git, Odoo.sh, Ubuntu, REST APIs.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <section class="sec" id="faq" aria-labelledby="faq-h" style="padding-top:0">
-  <div class="wrap faq-grid">
+  <div class="wrap">
     <div class="sec-head">
       <h2 id="faq-h">Odoo development FAQ</h2>
       <p class="lede">Common questions about hiring an Odoo developer. Anything else, ask on WhatsApp or by email.</p>
