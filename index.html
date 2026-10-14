@@ -94,7 +94,7 @@ h2{font-size:clamp(2.1rem,4.4vw,3.6rem);max-width:18ch;text-wrap:balance}
 h3{font-size:1.3rem;font-stretch:88%;font-weight:680;line-height:1.2;letter-spacing:-.005em}
 code{font-family:var(--mono);font-size:.86em;background:var(--sunk);padding:1px 6px;border-radius:5px;white-space:nowrap;direction:ltr;unicode-bidi:isolate}
 :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
-.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.wrap{width:min(1440px,100% - 2 * clamp(24px,6vw,240px));margin-inline:auto}
 .lede{color:var(--muted);font-size:1.15rem;line-height:1.55;max-width:56ch}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .ltr{direction:ltr;unicode-bidi:isolate}
@@ -470,7 +470,7 @@ footer{padding:0 0 48px;color:var(--muted);font-size:.9rem}
 }
 @media (max-width:600px){
   body{font-size:1rem}
-  .wrap{width:min(1200px,100% - 36px)}
+  .wrap{width:min(1440px,100% - 36px)}
   .hero{padding-top:40px}
   .sec{padding:96px 0}
   .ctas .btn:not(.btn-square){flex:1 1 auto;justify-content:center}
